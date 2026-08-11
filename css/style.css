@@ -6,11 +6,13 @@
 }
 
 :root {
-  --bg: #111111;
-  --bg-alt: #1a1a1a;
-  --text: #f2f2f2;
-  --text-muted: #a3a3a3;
-  --border: #2c2c2c;
+  --bg: #1a1613;
+  --bg-alt: #231e19;
+  --text: #f2ede4;
+  --text-muted: #a89f8f;
+  --border: #352e27;
+  --accent: #c17a4a;
+  --font-heading: "Fraunces", Georgia, serif;
   --sidebar-width: 260px;
 }
 
@@ -36,6 +38,7 @@ a {
 }
 
 .section-title {
+  font-family: var(--font-heading);
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -59,6 +62,7 @@ a {
 }
 
 .sidebar-logo {
+  font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: 0.12em;
   font-size: 1.05rem;
@@ -102,7 +106,7 @@ a {
 
 .sidebar-nav a:hover,
 .sidebar-nav a.current {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .sidebar-footer {
@@ -125,7 +129,7 @@ a {
 }
 
 .sidebar-social a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .sidebar-copyright {
@@ -172,6 +176,7 @@ a {
 }
 
 .mobile-logo {
+  font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: 0.08em;
   font-size: 0.85rem;
@@ -243,7 +248,7 @@ a {
 }
 
 .slide-dot.active {
-  background: #fff;
+  background: var(--accent);
 }
 
 /* ---------- Gallery pages ---------- */
@@ -327,6 +332,7 @@ a {
 }
 
 .contact-email {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 600;
   border-bottom: 1px solid var(--text-muted);
@@ -349,7 +355,7 @@ a {
 }
 
 .social-links a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 /* ---------- Lightbox ---------- */
