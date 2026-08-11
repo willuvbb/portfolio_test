@@ -4,12 +4,10 @@
 // ---------- Mobile nav ----------
 const navToggle = document.querySelector(".nav-toggle");
 const sidebar = document.getElementById("sidebar");
-const mobileLogo = document.querySelector(".mobile-logo");
 
 function setSidebarOpen(isOpen) {
   navToggle.setAttribute("aria-expanded", String(isOpen));
   sidebar.classList.toggle("open", isOpen);
-  mobileLogo.style.visibility = isOpen ? "hidden" : "";
 }
 
 navToggle.addEventListener("click", () => {

@@ -56,7 +56,6 @@ a {
   padding: 2.5rem 2rem;
   overflow-y: auto;
   z-index: 200;
-  transition: transform 0.3s ease;
 }
 
 .sidebar-logo {
@@ -69,6 +68,7 @@ a {
 
 .sidebar-nav {
   flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -107,6 +107,7 @@ a {
 
 .sidebar-footer {
   margin-top: 2rem;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -132,12 +133,13 @@ a {
   font-size: 0.75rem;
 }
 
+.mobile-topbar {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
-  position: fixed;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 210;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -146,7 +148,6 @@ a {
   background: var(--bg-alt);
   border: 1px solid var(--border);
   cursor: pointer;
-  transition: left 0.3s ease;
 }
 
 .nav-toggle span {
@@ -171,14 +172,6 @@ a {
 }
 
 .mobile-logo {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 4.5rem;
-  z-index: 205;
-  height: 40px;
-  line-height: 40px;
-  margin-top: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   font-size: 0.85rem;
@@ -419,25 +412,39 @@ a {
 }
 
 @media (max-width: 780px) {
-  .sidebar {
-    transform: translateX(-100%);
-    width: 240px;
-  }
-
-  .nav-toggle[aria-expanded="true"] {
-    left: 180px;
-  }
-
-  .sidebar.open {
-    transform: translateX(0);
+  .mobile-topbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 210;
+    background: var(--bg);
   }
 
   .nav-toggle {
     display: flex;
   }
 
-  .mobile-logo {
-    display: block;
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .sidebar.open {
+    max-height: 500px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .sidebar-logo {
+    display: none;
   }
 
   .page-content {
