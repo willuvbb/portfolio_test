@@ -15,7 +15,6 @@ const NATURE_PHOTOS = [
   { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse" },
   { src: "images/nature-and-light/taillight blur.jpg", alt: "Blurred taillights" },
   { src: "images/nature-and-light/wooden chair.jpg", alt: "Wooden chair" },
-  { src: "images/nature-and-light/freedom boat.jpg", alt: "Freedom boat" },
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
   { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore" },
 ];
@@ -28,10 +27,23 @@ const PORTRAITS_PHOTOS = [
   { src: "images/portraits/nate portrait.jpg", alt: "Portrait of Nate" },
 ];
 
+const WOODSHOP_PHOTOS = [
+  { src: "images/woodshop/hand plane.jpg", alt: "Hand plane" },
+  { src: "images/woodshop/sammy shop portrait.jpg", alt: "Portrait of Sammy in the shop" },
+  { src: "images/woodshop/freedom boat.jpg", alt: "Freedom boat" },
+];
+
+const MCKINLEY_TECH_PHOTOS = [
+  { src: "images/mckinley-tech/mths db girl1.jpg", alt: "McKinley Tech — girl" },
+  { src: "images/mckinley-tech/mths db schroeder.jpg", alt: "McKinley Tech — Schroeder" },
+  { src: "images/mckinley-tech/mths db surprise.jpg", alt: "McKinley Tech — surprise" },
+];
+
 // Homepage slider — a handful of standout shots with display titles.
 const SLIDER_PHOTOS = [
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees", title: "Trees" },
   { src: "images/wildlife/osprey.jpg", alt: "Osprey", title: "Osprey" },
   { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse", title: "Eclipse" },
-  { src: "images/nature-and-light/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
+  { src: "images/woodshop/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
+  { src: "images/woodshop/hand plane.jpg", alt: "Hand plane", title: "Hand Plane" },
 ];
