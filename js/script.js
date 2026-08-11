@@ -103,11 +103,6 @@ if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
     slide.className = "slide" + (index === 0 ? " active" : "");
     slide.style.backgroundImage = `url('${photo.src}')`;
 
-    const caption = document.createElement("div");
-    caption.className = "slide-caption";
-    caption.textContent = photo.title || photo.alt;
-    slide.appendChild(caption);
-
     sliderEl.appendChild(slide);
   });
 
