@@ -25,18 +25,70 @@ document.getElementById("year").textContent = new Date().getFullYear();
 const galleryEl = document.getElementById("gallery");
 
 if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
-  GALLERY_PHOTOS.forEach((photo, index) => {
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-    item.dataset.index = index;
+  // True masonry: each photo goes into whichever column is currently
+  // shortest, based on its real aspect ratio. CSS column-count only
+  // estimates one target height and dumps overflow into the last
+  // column, which looks badly lopsided with a small/uneven photo set.
+  function getColumnCount() {
+    return window.innerWidth <= 900 ? 2 : 3;
+  }
 
-    const img = document.createElement("img");
-    img.src = photo.src;
-    img.alt = photo.alt;
-    img.loading = "lazy";
+  function loadRatio(photo) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img.naturalWidth / img.naturalHeight || 4 / 3);
+      img.onerror = () => resolve(4 / 3);
+      img.src = photo.src;
+    });
+  }
 
-    item.appendChild(img);
-    galleryEl.appendChild(item);
+  function layoutGallery(ratios) {
+    const columnCount = getColumnCount();
+    galleryEl.innerHTML = "";
+
+    const columns = [];
+    const heights = [];
+    for (let i = 0; i < columnCount; i++) {
+      const col = document.createElement("div");
+      col.className = "gallery-column";
+      galleryEl.appendChild(col);
+      columns.push(col);
+      heights.push(0);
+    }
+
+    GALLERY_PHOTOS.forEach((photo, index) => {
+      const shortest = heights.indexOf(Math.min(...heights));
+
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+      item.dataset.index = index;
+
+      const img = document.createElement("img");
+      img.src = photo.src;
+      img.alt = photo.alt;
+      img.loading = "lazy";
+
+      item.appendChild(img);
+      columns[shortest].appendChild(item);
+      heights[shortest] += 1 / ratios[index];
+    });
+  }
+
+  Promise.all(GALLERY_PHOTOS.map(loadRatio)).then((ratios) => {
+    layoutGallery(ratios);
+
+    let lastColumnCount = getColumnCount();
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const count = getColumnCount();
+        if (count !== lastColumnCount) {
+          lastColumnCount = count;
+          layoutGallery(ratios);
+        }
+      }, 150);
+    });
   });
 
   const lightbox = document.getElementById("lightbox");

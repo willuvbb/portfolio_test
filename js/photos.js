@@ -24,6 +24,8 @@ const PORTRAITS_PHOTOS = [
   { src: "images/portraits/bobby portrait.jpg", alt: "Portrait of Bobby" },
   { src: "images/portraits/maverick portrait.jpg", alt: "Portrait of Maverick" },
   { src: "images/portraits/sophia portrait.jpg", alt: "Portrait of Sophia" },
+  { src: "images/portraits/chandler portrait.jpg", alt: "Portrait of Chandler" },
+  { src: "images/portraits/nate portrait.jpg", alt: "Portrait of Nate" },
 ];
 
 // Homepage slider — a handful of standout shots with display titles.
