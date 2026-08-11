@@ -2,12 +2,12 @@
 // each portfolio section. Drop new images in the matching images/ subfolder
 // and swap the paths below.
 
-const BIRDS_PHOTOS = [
-  { src: "images/birds/osprey.jpg", alt: "Osprey" },
-  { src: "images/birds/black capped chicadee.jpg", alt: "Black-capped chickadee" },
-  { src: "images/birds/yellow bird.jpg", alt: "Yellow bird" },
-  { src: "images/birds/colorful background bird.jpg", alt: "Bird against a colorful background" },
-  { src: "images/birds/baby ducks.jpg", alt: "Baby ducks" },
+const WILDLIFE_PHOTOS = [
+  { src: "images/wildlife/osprey.jpg", alt: "Osprey" },
+  { src: "images/wildlife/black capped chicadee.jpg", alt: "Black-capped chickadee" },
+  { src: "images/wildlife/yellow bird.jpg", alt: "Yellow bird" },
+  { src: "images/wildlife/colorful background bird.jpg", alt: "Bird against a colorful background" },
+  { src: "images/wildlife/baby ducks.jpg", alt: "Baby ducks" },
 ];
 
 const NATURE_PHOTOS = [
@@ -29,8 +29,7 @@ const PORTRAITS_PHOTOS = [
 // Homepage slider — a handful of standout shots with display titles.
 const SLIDER_PHOTOS = [
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees", title: "Trees" },
-  { src: "images/birds/osprey.jpg", alt: "Osprey", title: "Osprey" },
+  { src: "images/wildlife/osprey.jpg", alt: "Osprey", title: "Osprey" },
   { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse", title: "Eclipse" },
   { src: "images/nature-and-light/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
-  { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore", title: "Rocky Shore" },
 ];

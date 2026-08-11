@@ -21,7 +21,7 @@ sidebar.querySelectorAll("a").forEach((link) => {
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ---------- Gallery + lightbox (birds.html, nature-and-light.html) ----------
+// ---------- Gallery + lightbox (wildlife.html, nature-and-light.html) ----------
 const galleryEl = document.getElementById("gallery");
 
 if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
