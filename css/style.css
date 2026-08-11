@@ -146,6 +146,7 @@ a {
   background: var(--bg-alt);
   border: 1px solid var(--border);
   cursor: pointer;
+  transition: left 0.3s ease;
 }
 
 .nav-toggle span {
@@ -167,6 +168,21 @@ a {
 
 .nav-toggle[aria-expanded="true"] span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-logo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 4.5rem;
+  z-index: 205;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 /* ---------- Page content ---------- */
@@ -408,12 +424,20 @@ a {
     width: 240px;
   }
 
+  .nav-toggle[aria-expanded="true"] {
+    left: 180px;
+  }
+
   .sidebar.open {
     transform: translateX(0);
   }
 
   .nav-toggle {
     display: flex;
+  }
+
+  .mobile-logo {
+    display: block;
   }
 
   .page-content {

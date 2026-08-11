@@ -4,18 +4,20 @@
 // ---------- Mobile nav ----------
 const navToggle = document.querySelector(".nav-toggle");
 const sidebar = document.getElementById("sidebar");
+const mobileLogo = document.querySelector(".mobile-logo");
+
+function setSidebarOpen(isOpen) {
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  sidebar.classList.toggle("open", isOpen);
+  mobileLogo.style.visibility = isOpen ? "hidden" : "";
+}
 
 navToggle.addEventListener("click", () => {
-  const expanded = navToggle.getAttribute("aria-expanded") === "true";
-  navToggle.setAttribute("aria-expanded", String(!expanded));
-  sidebar.classList.toggle("open");
+  setSidebarOpen(navToggle.getAttribute("aria-expanded") !== "true");
 });
 
 sidebar.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navToggle.setAttribute("aria-expanded", "false");
-    sidebar.classList.remove("open");
-  });
+  link.addEventListener("click", () => setSidebarOpen(false));
 });
 
 // ---------- Footer year ----------
