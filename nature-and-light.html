@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Photography</title>
-<meta name="description" content="Photography portfolio of Your Name.">
+<title>Nature &amp; Light — Your Name Photography</title>
+<meta name="description" content="Nature and light photography by Your Name.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
   <nav class="sidebar-nav">
     <div class="nav-group-label">Portfolio</div>
     <a href="birds.html" class="sub-link">Birds</a>
-    <a href="nature-and-light.html" class="sub-link">Nature &amp; Light</a>
+    <a href="nature-and-light.html" class="sub-link current">Nature &amp; Light</a>
     <a href="portraits.html" class="sub-link">Portraits</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -33,20 +33,23 @@
 </aside>
 
 <div class="page-content">
-  <section class="hero-slider" id="heroSlider"></section>
-
-  <section class="intro-section">
-    <h1>Photography by Your Name</h1>
-    <p>Capturing light, place, and moment.</p>
-    <div class="intro-links">
-      <a href="birds.html">Birds</a>
-      <a href="nature-and-light.html">Nature &amp; Light</a>
-      <a href="portraits.html">Portraits</a>
-    </div>
+  <div class="gallery-page-header">
+    <h1 class="section-title">Nature &amp; Light</h1>
+  </div>
+  <section class="gallery-section">
+    <div class="gallery" id="gallery"></div>
   </section>
 </div>
 
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+</div>
+
 <script src="js/photos.js"></script>
+<script>window.GALLERY_PHOTOS = NATURE_PHOTOS;</script>
 <script src="js/script.js"></script>
 </body>
 </html>

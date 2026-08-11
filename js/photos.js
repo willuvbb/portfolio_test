@@ -1,15 +1,36 @@
-// Add or remove entries here to update the gallery.
-// src: path to the image (swap the .svg placeholders for your own .jpg/.png files)
-// alt: short description of the photo, used for accessibility and the lightbox caption
-const PHOTOS = [
-  { src: "images/gallery/osprey.jpg", alt: "Osprey" },
-  { src: "images/gallery/black capped chicadee.jpg", alt: "Black-capped chickadee" },
-  { src: "images/gallery/yellow bird.jpg", alt: "Yellow bird" },
-  { src: "images/gallery/colorful background bird.jpg", alt: "Bird against a colorful background" },
-  { src: "images/gallery/baby ducks.jpg", alt: "Baby ducks" },
-  { src: "images/gallery/eclipse.jpg", alt: "Solar eclipse" },
-  { src: "images/gallery/water on leaves.jpg", alt: "Water droplets on leaves" },
-  { src: "images/gallery/wooden chair.jpg", alt: "Wooden chair" },
-  { src: "images/gallery/taillight blur.jpg", alt: "Blurred taillights" },
-  { src: "images/gallery/freedom boat.jpg", alt: "Freedom boat" },
+// Photo data, grouped by theme. Add/remove/reorder entries here to update
+// each portfolio section. Drop new images in the matching images/ subfolder
+// and swap the paths below.
+
+const BIRDS_PHOTOS = [
+  { src: "images/birds/osprey.jpg", alt: "Osprey" },
+  { src: "images/birds/black capped chicadee.jpg", alt: "Black-capped chickadee" },
+  { src: "images/birds/yellow bird.jpg", alt: "Yellow bird" },
+  { src: "images/birds/colorful background bird.jpg", alt: "Bird against a colorful background" },
+  { src: "images/birds/baby ducks.jpg", alt: "Baby ducks" },
+];
+
+const NATURE_PHOTOS = [
+  { src: "images/nature-and-light/water on leaves.jpg", alt: "Water droplets on leaves" },
+  { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse" },
+  { src: "images/nature-and-light/taillight blur.jpg", alt: "Blurred taillights" },
+  { src: "images/nature-and-light/wooden chair.jpg", alt: "Wooden chair" },
+  { src: "images/nature-and-light/freedom boat.jpg", alt: "Freedom boat" },
+  { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
+  { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore" },
+];
+
+const PORTRAITS_PHOTOS = [
+  { src: "images/portraits/bobby portrait.jpg", alt: "Portrait of Bobby" },
+  { src: "images/portraits/maverick portrait.jpg", alt: "Portrait of Maverick" },
+  { src: "images/portraits/sophia portrait.jpg", alt: "Portrait of Sophia" },
+];
+
+// Homepage slider — a handful of standout shots with display titles.
+const SLIDER_PHOTOS = [
+  { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees", title: "Trees" },
+  { src: "images/birds/osprey.jpg", alt: "Osprey", title: "Osprey" },
+  { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse", title: "Eclipse" },
+  { src: "images/nature-and-light/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
+  { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore", title: "Rocky Shore" },
 ];
