@@ -201,6 +201,7 @@ a {
 .slide {
   position: absolute;
   inset: 0;
+  background-color: var(--bg);
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -212,11 +213,11 @@ a {
   opacity: 1;
 }
 
-.slide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.55) 100%);
+@media (min-width: 781px) {
+  .slide.portrait-photo {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .slide-dots {
@@ -226,6 +227,9 @@ a {
   z-index: 2;
   display: flex;
   gap: 0.6rem;
+  padding: 0.5rem 0.7rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 999px;
 }
 
 .slide-dot {
@@ -453,6 +457,11 @@ a {
 
   .hero-slider {
     margin: 0 1.5rem;
+  }
+
+  .slide.landscape-photo {
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .slide-dots {

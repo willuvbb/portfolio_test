@@ -155,6 +155,16 @@ if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
     slide.className = "slide" + (index === 0 ? " active" : "");
     slide.style.backgroundImage = `url('${photo.src}')`;
 
+    const img = new Image();
+    img.onload = () => {
+      if (img.naturalWidth > img.naturalHeight) {
+        slide.classList.add("landscape-photo");
+      } else if (img.naturalHeight > img.naturalWidth) {
+        slide.classList.add("portrait-photo");
+      }
+    };
+    img.src = photo.src;
+
     sliderEl.appendChild(slide);
   });
 

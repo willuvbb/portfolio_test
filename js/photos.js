@@ -42,8 +42,8 @@ const MCKINLEY_TECH_PHOTOS = [
 // Homepage slider — a handful of standout shots with display titles.
 const SLIDER_PHOTOS = [
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees", title: "Trees" },
-  { src: "images/wildlife/osprey.jpg", alt: "Osprey", title: "Osprey" },
   { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse", title: "Eclipse" },
   { src: "images/woodshop/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
   { src: "images/woodshop/hand plane.jpg", alt: "Hand plane", title: "Hand Plane" },
+  { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore", title: "Rocky Shore" },
 ];
