@@ -191,6 +191,7 @@ a {
   background-size: cover;
   background-position: center;
   opacity: 0;
+  cursor: pointer;
   transition: opacity 1.2s ease;
 }
 
