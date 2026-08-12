@@ -21,16 +21,27 @@ const NATURE_PHOTOS = [
 
 const PORTRAITS_PHOTOS = [
   { src: "images/portraits/bobby portrait.jpg", alt: "Portrait of Bobby" },
-  { src: "images/portraits/maverick portrait.jpg", alt: "Portrait of Maverick" },
+  { src: "images/portraits/matthew dirr portrait.jpg", alt: "Portrait of Matthew Dirr" },
+  { src: "images/portraits/wade portrait.jpg", alt: "Portrait of Wade" },
   { src: "images/portraits/sophia portrait.jpg", alt: "Portrait of Sophia" },
+  { src: "images/portraits/dan portrait.jpg", alt: "Portrait of Dan" },
+  { src: "images/portraits/zia portrait.jpg", alt: "Portrait of Zia" },
+  { src: "images/portraits/tiff portrait.jpg", alt: "Portrait of Tiff" },
   { src: "images/portraits/chandler portrait.jpg", alt: "Portrait of Chandler" },
+  { src: "images/portraits/sam carly portrait.jpg", alt: "Portrait of Sam and Carly" },
+  { src: "images/portraits/maverick portrait.jpg", alt: "Portrait of Maverick" },
   { src: "images/portraits/nate portrait.jpg", alt: "Portrait of Nate" },
+  { src: "images/portraits/sophia portrait 2.jpg", alt: "Portrait of Sophia" },
+  { src: "images/portraits/beth portrait.jpg", alt: "Portrait of Beth" },
+  { src: "images/portraits/bill and tom portrait.jpg", alt: "Portrait of Bill and Tom" },
+  { src: "images/portraits/jason portrait.jpg", alt: "Portrait of Jason" },
 ];
 
 const WOODSHOP_PHOTOS = [
   { src: "images/woodshop/hand plane.jpg", alt: "Hand plane" },
   { src: "images/woodshop/sammy shop portrait.jpg", alt: "Portrait of Sammy in the shop" },
   { src: "images/woodshop/freedom boat.jpg", alt: "Freedom boat" },
+  { src: "images/woodshop/rory woodshop.jpg", alt: "Rory in the woodshop" },
 ];
 
 const MCKINLEY_TECH_PHOTOS = [
