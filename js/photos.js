@@ -16,7 +16,6 @@ const NATURE_PHOTOS = [
   { src: "images/nature-and-light/acatenango shadow 2.jpg", alt: "Shadow on Acatenango" },
   { src: "images/nature-and-light/volcan de fuego.jpg", alt: "Volcán de Fuego" },
   { src: "images/nature-and-light/taillight blur.jpg", alt: "Blurred taillights" },
-  { src: "images/nature-and-light/volcan de fuego erupting.jpg", alt: "Volcán de Fuego erupting" },
   { src: "images/nature-and-light/wooden chair.jpg", alt: "Wooden chair" },
   { src: "images/nature-and-light/tikal temple.jpg", alt: "Temple at Tikal" },
   { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore" },
