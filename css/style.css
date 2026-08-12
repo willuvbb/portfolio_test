@@ -61,13 +61,25 @@ a {
   z-index: 200;
 }
 
+.logo-mark {
+  fill: currentColor;
+  display: block;
+}
+
 .sidebar-logo {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 1.05rem;
+  color: var(--text);
   margin-bottom: 3rem;
   display: block;
+  transition: color 0.2s ease;
+}
+
+.sidebar-logo:hover {
+  color: var(--accent);
+}
+
+.sidebar-logo .logo-mark {
+  width: 150px;
+  height: auto;
 }
 
 .sidebar-nav {
@@ -176,11 +188,14 @@ a {
 }
 
 .mobile-logo {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  white-space: nowrap;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-logo .logo-mark {
+  width: 76px;
+  height: auto;
 }
 
 /* ---------- Page content ---------- */
@@ -358,6 +373,22 @@ a {
   color: var(--accent);
 }
 
+/* ---------- Footer ---------- */
+.page-footer {
+  position: fixed;
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 0.85rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
 /* ---------- Lightbox ---------- */
 .lightbox {
   position: fixed;
@@ -459,6 +490,10 @@ a {
 
   .page-content {
     margin-left: 0;
+  }
+
+  .page-footer {
+    left: 0;
   }
 
   .hero-slider {
