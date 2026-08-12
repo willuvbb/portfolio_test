@@ -11,12 +11,22 @@ const WILDLIFE_PHOTOS = [
 ];
 
 const NATURE_PHOTOS = [
-  { src: "images/nature-and-light/water on leaves.jpg", alt: "Water droplets on leaves" },
-  { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse" },
+  { src: "images/nature-and-light/volcan de fuego 2.jpg", alt: "Volcán de Fuego" },
+  { src: "images/nature-and-light/acatenango sillouhettes.jpg", alt: "Silhouettes on Acatenango" },
+  { src: "images/nature-and-light/acatenango shadow 2.jpg", alt: "Shadow on Acatenango" },
+  { src: "images/nature-and-light/volcan de fuego.jpg", alt: "Volcán de Fuego" },
   { src: "images/nature-and-light/taillight blur.jpg", alt: "Blurred taillights" },
+  { src: "images/nature-and-light/volcan de fuego erupting.jpg", alt: "Volcán de Fuego erupting" },
   { src: "images/nature-and-light/wooden chair.jpg", alt: "Wooden chair" },
-  { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
+  { src: "images/nature-and-light/tikal temple.jpg", alt: "Temple at Tikal" },
   { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore" },
+  { src: "images/nature-and-light/water on leaves.jpg", alt: "Water droplets on leaves" },
+  { src: "images/nature-and-light/tikal sunset.jpg", alt: "Sunset at Tikal" },
+  { src: "images/nature-and-light/acatenango clouds.jpg", alt: "Clouds over Acatenango" },
+  { src: "images/nature-and-light/acatenango shadow.jpg", alt: "Shadow on Acatenango" },
+  { src: "images/nature-and-light/atitlan boat.jpg", alt: "Boat on Lake Atitlán" },
+  { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse" },
+  { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
 ];
 
 const PORTRAITS_PHOTOS = [
