@@ -144,6 +144,35 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
     if (e.key === "ArrowLeft") showPrev();
     if (e.key === "ArrowRight") showNext();
   });
+
+  let lightboxTouchStartX = 0;
+  let lightboxTouchStartY = 0;
+
+  lightbox.addEventListener(
+    "touchstart",
+    (e) => {
+      lightboxTouchStartX = e.changedTouches[0].clientX;
+      lightboxTouchStartY = e.changedTouches[0].clientY;
+    },
+    { passive: true }
+  );
+
+  lightbox.addEventListener(
+    "touchend",
+    (e) => {
+      const deltaX = e.changedTouches[0].clientX - lightboxTouchStartX;
+      const deltaY = e.changedTouches[0].clientY - lightboxTouchStartY;
+
+      if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX < 0) {
+          showNext();
+        } else {
+          showPrev();
+        }
+      }
+    },
+    { passive: true }
+  );
 }
 
 // ---------- Homepage hero slider ----------
