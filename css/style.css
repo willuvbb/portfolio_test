@@ -64,6 +64,52 @@ a {
 .logo-mark {
   fill: currentColor;
   display: block;
+  overflow: hidden;
+}
+
+/* Intro animation: a square sweeps left-to-right across each row,
+   revealing the checkered mark as it passes over it. */
+.logo-cover,
+.logo-scan {
+  animation-name: logo-scan-sweep;
+  animation-duration: 0.6s;
+  animation-timing-function: step-end;
+  animation-fill-mode: forwards;
+}
+
+.logo-cover {
+  fill: var(--bg);
+}
+
+.logo-scan {
+  fill: var(--accent);
+}
+
+.logo-cover--row2,
+.logo-scan--row2 {
+  animation-delay: 0.6s;
+}
+
+.logo-scan--row2 {
+  opacity: 0;
+}
+
+@keyframes logo-scan-sweep {
+  0%   { transform: translateX(0px); opacity: 1; }
+  20%  { transform: translateX(52.88px); }
+  40%  { transform: translateX(105.77px); }
+  60%  { transform: translateX(158.65px); }
+  80%  { transform: translateX(211.53px); }
+  100% { transform: translateX(264.41px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-cover,
+  .logo-scan {
+    animation: none;
+    transform: translateX(264.41px);
+    opacity: 0;
+  }
 }
 
 .sidebar-logo {
