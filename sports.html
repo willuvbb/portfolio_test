@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Will Cunningham Photography</title>
-<meta name="description" content="About Will Cunningham, photographer.">
+<title>Sports — Will Cunningham Photography</title>
+<meta name="description" content="Sports photography by Will Cunningham.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -65,8 +65,8 @@
     <a href="portraits.html" class="sub-link">Portraits</a>
     <a href="woodshop.html" class="sub-link">Woodshop</a>
     <a href="mckinley-tech.html" class="sub-link">McKinley Tech</a>
-    <a href="sports.html" class="sub-link">Sports</a>
-    <a href="about.html" class="current">About</a>
+    <a href="sports.html" class="sub-link current">Sports</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
   <div class="sidebar-footer">
@@ -79,29 +79,25 @@
 </aside>
 
 <div class="page-content">
-  <section class="about-section">
-    <div class="about-image">
-      <img src="images/headshot.jpg" alt="Portrait of Will Cunningham">
-    </div>
-    <div class="about-text">
-      <h1 class="section-title">About</h1>
-      <p>
-        I'm a photographer based in Washington, D.C.,
-         focused on portraiture, landscape, and wildlife photography.
-         I started shooting in 2020.
-      </p>
-      <p>
-        I currently work as a high school physics teacher
-        and I am passionate about people,
-        puzzles, and purpose.
-      </p>
-    </div>
+  <div class="gallery-page-header">
+    <h1 class="section-title">Sports</h1>
+  </div>
+  <section class="gallery-section">
+    <div class="gallery" id="gallery"></div>
   </section>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
 </div>
 
 <footer class="page-footer">Will Cunningham Photography</footer>
 
 <script src="js/photos.js"></script>
+<script>window.GALLERY_PHOTOS = SPORTS_PHOTOS;</script>
 <script src="js/script.js"></script>
 </body>
 </html>

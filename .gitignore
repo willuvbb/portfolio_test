@@ -1,1 +1,5 @@
 .DS_Store
+
+# Staging area for new photos before they're sorted/resized into a category
+images/inbox/*
+!images/inbox/.gitkeep

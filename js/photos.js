@@ -8,6 +8,14 @@ const WILDLIFE_PHOTOS = [
   { src: "images/wildlife/yellow bird.jpg", alt: "Yellow bird" },
   { src: "images/wildlife/colorful background bird.jpg", alt: "Bird against a colorful background" },
   { src: "images/wildlife/baby ducks.jpg", alt: "Baby ducks" },
+  { src: "images/wildlife/small bird on branch.jpg", alt: "Small bird perched on a branch" },
+  { src: "images/wildlife/bird flying over water.jpg", alt: "Bird flying low over water" },
+  { src: "images/wildlife/bird flying low over water.jpg", alt: "Bird flying low over water" },
+  { src: "images/wildlife/red winged blackbird.jpg", alt: "Red-winged blackbird on a branch" },
+  { src: "images/wildlife/bird silhouette at dusk.jpg", alt: "Bird silhouette on a branch at dusk" },
+  { src: "images/wildlife/panda.jpg", alt: "Panda" },
+  { src: "images/wildlife/backlit sparrow.jpg", alt: "Sparrow perched in branches, backlit" },
+  { src: "images/wildlife/bird in flight.jpg", alt: "Bird in flight near branches" },
 ];
 
 const NATURE_PHOTOS = [
@@ -26,6 +34,8 @@ const NATURE_PHOTOS = [
   { src: "images/nature-and-light/atitlan boat.jpg", alt: "Boat on Lake Atitlán" },
   { src: "images/nature-and-light/eclipse.jpg", alt: "Solar eclipse" },
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
+  { src: "images/nature-and-light/backlit branches.jpg", alt: "Backlit branches and seed pods at dusk" },
+  { src: "images/nature-and-light/spiderweb dew.jpg", alt: "Spiderweb backlit with dew" },
 ];
 
 const PORTRAITS_PHOTOS = [
@@ -44,6 +54,18 @@ const PORTRAITS_PHOTOS = [
   { src: "images/portraits/beth portrait.jpg", alt: "Portrait of Beth" },
   { src: "images/portraits/bill and tom portrait.jpg", alt: "Portrait of Bill and Tom" },
   { src: "images/portraits/jason portrait.jpg", alt: "Portrait of Jason" },
+  { src: "images/portraits/man on rooftop portrait.jpg", alt: "Portrait of a man on a rooftop, city in the background" },
+  { src: "images/portraits/woman in green jacket portrait.jpg", alt: "Portrait of a woman in a green rain jacket" },
+  { src: "images/portraits/couple portrait.jpg", alt: "Candid portrait of a couple" },
+  { src: "images/portraits/rocky shore portrait.jpg", alt: "Woman standing on a rocky shoreline below a mountain" },
+  { src: "images/portraits/rocky shore silhouette.jpg", alt: "Man standing on a rocky shoreline at dusk" },
+  { src: "images/portraits/mountain summit.jpg", alt: "Man on a mountain summit, arms raised" },
+  { src: "images/portraits/cliff edge overlook.jpg", alt: "Woman sitting on a cliff edge above the sea" },
+  { src: "images/portraits/cliff climb.jpg", alt: "Man climbing along a cliff edge" },
+  { src: "images/portraits/cliff climb 2.jpg", alt: "Man climbing along a cliff edge" },
+  { src: "images/portraits/mountain lake sunset 1.jpg", alt: "Man in a life vest against a mountain lake at sunset" },
+  { src: "images/portraits/mountain lake sunset 2.jpg", alt: "Man against a mountain lake at sunset" },
+  { src: "images/portraits/mountain lake sunset 3.jpg", alt: "Woman against a mountain lake at sunset" },
 ];
 
 const WOODSHOP_PHOTOS = [
@@ -53,10 +75,51 @@ const WOODSHOP_PHOTOS = [
   { src: "images/woodshop/rory woodshop.jpg", alt: "Rory in the woodshop" },
 ];
 
+const SPORTS_PHOTOS = [
+  { src: "images/sports/basketball layup.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/basketball dunk.jpg", alt: "Basketball player dunking" },
+  { src: "images/sports/cheerleading pyramid.jpg", alt: "Cheerleaders forming a pyramid" },
+  { src: "images/sports/soccer sprint.jpg", alt: "Soccer player sprinting on the field" },
+  { src: "images/sports/basketball player portrait.jpg", alt: "Basketball player portrait in uniform" },
+  { src: "images/sports/soccer free kick.jpg", alt: "Soccer player taking a free kick" },
+  { src: "images/sports/basketball layup 2.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/soccer team celebration.jpg", alt: "Soccer players celebrating on the field" },
+  { src: "images/sports/soccer corner kick.jpg", alt: "Soccer player taking a corner kick" },
+  { src: "images/sports/soccer corner kick 2.jpg", alt: "Soccer player taking a corner kick" },
+  { src: "images/sports/soccer game action.jpg", alt: "Soccer players competing for the ball" },
+  { src: "images/sports/basketball layup 3.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/soccer stadium portrait.jpg", alt: "Soccer player on the field, stadium in the background" },
+  { src: "images/sports/soccer celebration run.jpg", alt: "Soccer players celebrating and running downfield" },
+  { src: "images/sports/soccer celebration run 2.jpg", alt: "Soccer players celebrating and running downfield" },
+  { src: "images/sports/soccer game action 2.jpg", alt: "Soccer player advancing with the ball" },
+  { src: "images/sports/basketball bench celebration.jpg", alt: "Basketball player laughing on the sideline" },
+  { src: "images/sports/soccer kick.jpg", alt: "Soccer player mid-kick" },
+  { src: "images/sports/soccer sprint 2.jpg", alt: "Soccer player running on the field" },
+  { src: "images/sports/soccer kick 2.jpg", alt: "Soccer player mid-kick" },
+  { src: "images/sports/football color guard.jpg", alt: "Football players and color guard on the field at night" },
+  { src: "images/sports/basketball layup 4.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/basketball layup 5.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/basketball layup 6.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/basketball layup 7.jpg", alt: "Basketball player going up for a layup" },
+  { src: "images/sports/basketball layup 8.jpg", alt: "Basketball player going up for a layup" },
+];
+
 const MCKINLEY_TECH_PHOTOS = [
   { src: "images/mckinley-tech/mths db girl1.jpg", alt: "McKinley Tech — girl" },
   { src: "images/mckinley-tech/mths db schroeder.jpg", alt: "McKinley Tech — Schroeder" },
   { src: "images/mckinley-tech/mths db surprise.jpg", alt: "McKinley Tech — surprise" },
+  { src: "images/mckinley-tech/we are tech pep rally.jpg", alt: "Students posing at a \"We Are Tech\" pep rally" },
+  { src: "images/mckinley-tech/classroom candid.jpg", alt: "Candid portrait of a man gesturing indoors" },
+  { src: "images/mckinley-tech/classroom candid 2.jpg", alt: "Candid portrait of a man gesturing in a classroom" },
+  { src: "images/mckinley-tech/chess club.jpg", alt: "Students playing chess" },
+  { src: "images/mckinley-tech/robotics team.jpg", alt: "Robotics team group photo" },
+  { src: "images/mckinley-tech/building a robot.jpg", alt: "Student building a robot in class" },
+  { src: "images/mckinley-tech/trainers club.jpg", alt: "Group photo of students and a teacher in the library" },
+  { src: "images/mckinley-tech/black and white candid.jpg", alt: "Black-and-white candid portrait of a student" },
+  { src: "images/mckinley-tech/prom portrait.jpg", alt: "Prom portrait of a couple" },
+  { src: "images/mckinley-tech/prom portrait 2.jpg", alt: "Prom portrait of two students" },
+  { src: "images/mckinley-tech/prom dance floor.jpg", alt: "Students dancing at prom" },
+  { src: "images/mckinley-tech/prom portrait 3.jpg", alt: "Prom portrait of a student posing" },
 ];
 
 // Homepage slider — a handful of standout shots with display titles.
