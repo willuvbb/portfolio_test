@@ -21,6 +21,21 @@ sidebar.querySelectorAll("a").forEach((link) => {
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ---------- Discourage right-click / drag-saving photos ----------
+// Deters casual saving only — view-source, devtools, and screenshots
+// still work, but this stops the common right-click / drag-to-desktop case.
+document.addEventListener("contextmenu", (e) => {
+  if (e.target.tagName === "IMG" || e.target.closest(".slide")) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("dragstart", (e) => {
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+
 // ---------- Gallery + lightbox (wildlife.html, nature-and-light.html) ----------
 const galleryEl = document.getElementById("gallery");
 
