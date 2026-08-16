@@ -3,6 +3,7 @@
 // and swap the paths below.
 
 const WILDLIFE_PHOTOS = [
+  { src: "images/wildlife/MOLTING_CARDINAL.jpg", alt: "Molting cardinal perched on a branch" },
   { src: "images/wildlife/osprey.jpg", alt: "Osprey" },
   { src: "images/wildlife/black capped chicadee.jpg", alt: "Black-capped chickadee" },
   { src: "images/wildlife/yellow bird.jpg", alt: "Yellow bird" },
@@ -10,7 +11,6 @@ const WILDLIFE_PHOTOS = [
   { src: "images/wildlife/baby ducks.jpg", alt: "Baby ducks" },
   { src: "images/wildlife/small bird on branch.jpg", alt: "Small bird perched on a branch" },
   { src: "images/wildlife/bird flying over water.jpg", alt: "Bird flying low over water" },
-  { src: "images/wildlife/bird flying low over water.jpg", alt: "Bird flying low over water" },
   { src: "images/wildlife/red winged blackbird.jpg", alt: "Red-winged blackbird on a branch" },
   { src: "images/wildlife/bird silhouette at dusk.jpg", alt: "Bird silhouette on a branch at dusk" },
   { src: "images/wildlife/panda.jpg", alt: "Panda" },
@@ -19,7 +19,7 @@ const WILDLIFE_PHOTOS = [
 ];
 
 const NATURE_PHOTOS = [
-  { src: "images/nature-and-light/volcan de fuego 2.jpg", alt: "Volcán de Fuego" },
+  { src: "images/nature-and-light/LOTUS.jpg", alt: "Lotus flower in a pond" },
   { src: "images/nature-and-light/acatenango sillouhettes.jpg", alt: "Silhouettes on Acatenango" },
   { src: "images/nature-and-light/acatenango shadow 2.jpg", alt: "Shadow on Acatenango" },
   { src: "images/nature-and-light/volcan de fuego.jpg", alt: "Volcán de Fuego" },
@@ -129,4 +129,6 @@ const SLIDER_PHOTOS = [
   { src: "images/woodshop/freedom boat.jpg", alt: "Freedom boat", title: "Freedom" },
   { src: "images/woodshop/hand plane.jpg", alt: "Hand plane", title: "Hand Plane" },
   { src: "images/nature-and-light/rocky shore hero.jpg", alt: "Rocky shore", title: "Rocky Shore" },
+  { src: "images/nature-and-light/LOTUS.jpg", alt: "Lotus flower in a pond", title: "Lotus" },
+  { src: "images/wildlife/MOLTING_CARDINAL.jpg", alt: "Molting cardinal perched on a branch", title: "Molting Cardinal" },
 ];
