@@ -16,6 +16,19 @@ const WILDLIFE_PHOTOS = [
   { src: "images/wildlife/panda.jpg", alt: "Panda" },
   { src: "images/wildlife/backlit sparrow.jpg", alt: "Sparrow perched in branches, backlit" },
   { src: "images/wildlife/bird in flight.jpg", alt: "Bird in flight near branches" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-5332.jpg", alt: "Bird perched among bare branches with autumn leaves" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-7294.jpg", alt: "Chicken close-up against a blue background" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-4905.jpg", alt: "Dark bird perched on a mossy branch" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-7854.jpg", alt: "Black-capped chickadee among branches" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-7415.jpg", alt: "Turkey close-up" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-5010.jpg", alt: "Bird among green leaves and berries" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-6917.jpg", alt: "Praying mantis on a railing" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-3556.jpg", alt: "Bird perched on a broken branch stub" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-7465.jpg", alt: "White rooster close-up" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-3650.jpg", alt: "Bluebird perched on a rope" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED--3.jpg", alt: "Osprey perched on a post" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-8061.jpg", alt: "Small bird among bare branches and seed pods" },
+  { src: "images/wildlife/INSTAGRAM-OPTIMIZED-8711.jpg", alt: "Black snake on a stone wall" },
 ];
 
 const NATURE_PHOTOS = [
@@ -36,6 +49,18 @@ const NATURE_PHOTOS = [
   { src: "images/nature-and-light/tree hero photo.jpg", alt: "Trees" },
   { src: "images/nature-and-light/backlit branches.jpg", alt: "Backlit branches and seed pods at dusk" },
   { src: "images/nature-and-light/spiderweb dew.jpg", alt: "Spiderweb backlit with dew" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-9809.jpg", alt: "Small mushroom on the forest floor" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-0952.jpg", alt: "Sunflower field" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-9681.jpg", alt: "Dog running on the beach at sunset" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-8634.jpg", alt: "Beach sunset over the ocean" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-6313.jpg", alt: "Purple hyacinth flowers" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-3414.jpg", alt: "Purple irises in the rain" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-4605.jpg", alt: "Desert landscape at dusk" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-6712.jpg", alt: "Small airplane parked on the tarmac" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-.jpg", alt: "Pink dogwood flowers" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-7200.jpg", alt: "Pile of colorful fishing buoys" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-0122.jpg", alt: "Small orange mushroom on moss" },
+  { src: "images/nature-and-light/INSTAGRAM-OPTIMIZED-6260.jpg", alt: "Weathered American flag" },
 ];
 
 const PORTRAITS_PHOTOS = [
@@ -66,6 +91,10 @@ const PORTRAITS_PHOTOS = [
   { src: "images/portraits/mountain lake sunset 1.jpg", alt: "Man in a life vest against a mountain lake at sunset" },
   { src: "images/portraits/mountain lake sunset 2.jpg", alt: "Man against a mountain lake at sunset" },
   { src: "images/portraits/mountain lake sunset 3.jpg", alt: "Woman against a mountain lake at sunset" },
+  { src: "images/portraits/INSTAGRAM-OPTIMIZED-9878.jpg", alt: "Golden doodle standing on the beach" },
+  { src: "images/portraits/INSTAGRAM-OPTIMIZED-8871.jpg", alt: "Couple on the beach at sunset" },
+  { src: "images/portraits/INSTAGRAM-OPTIMIZED-9526.jpg", alt: "Man giving a woman a piggyback ride on the beach" },
+  { src: "images/portraits/INSTAGRAM-OPTIMIZED--2.jpg", alt: "Person walking past a red, white, and blue wall" },
 ];
 
 const WOODSHOP_PHOTOS = [
@@ -102,6 +131,10 @@ const SPORTS_PHOTOS = [
   { src: "images/sports/soccer stadium portrait.jpg", alt: "Soccer player on the field, stadium in the background" },
   { src: "images/sports/basketball layup 8.jpg", alt: "Basketball player going up for a layup" },
   { src: "images/sports/basketball dunk.jpg", alt: "Basketball player dunking" },
+  { src: "images/sports/INSTAGRAM-OPTIMIZED-8357.jpg", alt: "Tennis player celebrating with a fist pump" },
+  { src: "images/sports/INSTAGRAM-OPTIMIZED-7578.jpg", alt: "Tennis player hitting a forehand" },
+  { src: "images/sports/INSTAGRAM-OPTIMIZED-6657.jpg", alt: "Tennis player hitting a forehand" },
+  { src: "images/sports/INSTAGRAM-OPTIMIZED-6182.jpg", alt: "Tennis player serving" },
 ];
 
 const MCKINLEY_TECH_PHOTOS = [
@@ -120,6 +153,7 @@ const MCKINLEY_TECH_PHOTOS = [
   { src: "images/mckinley-tech/prom portrait.jpg", alt: "Prom portrait of a couple" },
   { src: "images/mckinley-tech/classroom candid 2.jpg", alt: "Candid portrait of a man gesturing in a classroom" },
   { src: "images/mckinley-tech/prom portrait 3.jpg", alt: "Prom portrait of a student posing" },
+  { src: "images/mckinley-tech/INSTAGRAM-OPTIMIZED-2.jpg", alt: "Marching band member playing a sousaphone" },
 ];
 
 // Homepage slider — a handful of standout shots with display titles.
