@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Will Cunningham Photography</title>
-<meta name="description" content="Contact Will Cunningham, photographer.">
+<meta name="description" content="Get in touch with Will Cunningham, a Washington, D.C.-based photographer, to book a portrait session, inquire about prints, or say hello.">
+<link rel="canonical" href="https://willcunninghamphoto.com/contact">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Will Cunningham Photography">
+<meta property="og:url" content="https://willcunninghamphoto.com/contact">
+<meta property="og:title" content="Contact — Will Cunningham Photography">
+<meta property="og:description" content="Get in touch with Will Cunningham, a Washington, D.C.-based photographer, to book a portrait session, inquire about prints, or say hello.">
+<meta property="og:image" content="https://willcunninghamphoto.com/images/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Will Cunningham Photography">
+<meta name="twitter:description" content="Get in touch with Will Cunningham, a Washington, D.C.-based photographer, to book a portrait session, inquire about prints, or say hello.">
+<meta name="twitter:image" content="https://willcunninghamphoto.com/images/headshot.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,7 +30,7 @@
   <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <a href="index.html" class="mobile-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="mobile-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -40,7 +51,7 @@
 </div>
 
 <aside class="sidebar" id="sidebar">
-  <a href="index.html" class="sidebar-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="sidebar-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -60,14 +71,14 @@
   </a>
   <nav class="sidebar-nav">
     <div class="nav-group-label">Portfolio</div>
-    <a href="wildlife.html" class="sub-link">Wildlife</a>
-    <a href="nature-and-light.html" class="sub-link">Nature &amp; Light</a>
-    <a href="portraits.html" class="sub-link">Portraits</a>
-    <a href="woodshop.html" class="sub-link">Woodshop</a>
-    <a href="mckinley-tech.html" class="sub-link">McKinley Tech</a>
-    <a href="sports.html" class="sub-link">Sports</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="current">Contact</a>
+    <a href="/wildlife" class="sub-link">Wildlife</a>
+    <a href="/nature-and-light" class="sub-link">Nature &amp; Light</a>
+    <a href="/portraits" class="sub-link">Portraits</a>
+    <a href="/woodshop" class="sub-link">Woodshop</a>
+    <a href="/mckinley-tech" class="sub-link">McKinley Tech</a>
+    <a href="/sports" class="sub-link">Sports</a>
+    <a href="/about">About</a>
+    <a href="/contact" class="current">Contact</a>
   </nav>
   <div class="sidebar-footer">
     <div class="sidebar-social">
@@ -81,8 +92,31 @@
 <div class="page-content">
   <section class="contact-section">
     <h1 class="section-title">Contact</h1>
-    <p>Interested in working together? Get in touch.</p>
-    <a class="contact-email" href="mailto:willuvbb@gmail.com">willuvbb@gmail.com</a>
+    <p>Interested in working together? Send a message and I'll get back to you.</p>
+
+    <!--
+      Powered by Formspree (https://formspree.io) — a free tier handles
+      low-volume static-site forms with no backend of your own. Sign up,
+      create a form, and replace YOUR_FORM_ID below with the endpoint it
+      gives you before this goes live.
+    -->
+    <form class="contact-form" action="https://formspree.io/f/myezewyl" method="POST">
+      <div>
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="_replyto" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Send Message</button>
+    </form>
+
     <div class="social-links">
       <a href="https://www.instagram.com/wlcworks" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.flickr.com/photos/196068418@N02/" target="_blank" rel="noopener">Flickr</a>

@@ -36,16 +36,21 @@ document.addEventListener("dragstart", (e) => {
   }
 });
 
-// ---------- Gallery + lightbox (wildlife.html, nature-and-light.html) ----------
+// ---------- Gallery + lightbox (wildlife.html, nature-and-light.html, etc.) ----------
+// Note: the gallery markup already in the page HTML (written by
+// tools/generate-static.js from photos.js) is a static, search-engine-
+// visible seed. JS below replaces it with a true masonry layout —
+// each photo goes into whichever column is currently shortest, based on
+// its real aspect ratio, which CSS column-count can't do (it only
+// estimates one target height and dumps overflow into the last column).
 const galleryEl = document.getElementById("gallery");
 
 if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
-  // True masonry: each photo goes into whichever column is currently
-  // shortest, based on its real aspect ratio. CSS column-count only
-  // estimates one target height and dumps overflow into the last
-  // column, which looks badly lopsided with a small/uneven photo set.
   function getColumnCount() {
-    return window.innerWidth <= 900 ? 2 : 3;
+    const w = window.innerWidth;
+    if (w <= 640) return 1;
+    if (w <= 900) return 2;
+    return 3;
   }
 
   function loadRatio(photo) {
@@ -74,9 +79,11 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
     GALLERY_PHOTOS.forEach((photo, index) => {
       const shortest = heights.indexOf(Math.min(...heights));
 
-      const item = document.createElement("div");
+      const item = document.createElement("button");
+      item.type = "button";
       item.className = "gallery-item";
       item.dataset.index = index;
+      item.setAttribute("aria-label", `View larger photo: ${photo.alt}`);
 
       const img = document.createElement("img");
       img.src = photo.src;
@@ -111,8 +118,10 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
   const lightboxClose = document.getElementById("lightboxClose");
   const lightboxPrev = document.getElementById("lightboxPrev");
   const lightboxNext = document.getElementById("lightboxNext");
+  const focusableInLightbox = [lightboxClose, lightboxPrev, lightboxNext];
 
   let currentIndex = 0;
+  let lightboxTriggerEl = null;
 
   function updateLightboxImage() {
     const photo = GALLERY_PHOTOS[currentIndex];
@@ -120,14 +129,17 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
     lightboxImg.alt = photo.alt;
   }
 
-  function openLightbox(index) {
+  function openLightbox(index, triggerEl) {
     currentIndex = index;
+    lightboxTriggerEl = triggerEl || document.activeElement;
     updateLightboxImage();
     lightbox.classList.add("active");
+    lightboxClose.focus();
   }
 
   function closeLightbox() {
     lightbox.classList.remove("active");
+    if (lightboxTriggerEl) lightboxTriggerEl.focus();
   }
 
   function showPrev() {
@@ -142,7 +154,7 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
 
   galleryEl.addEventListener("click", (e) => {
     const item = e.target.closest(".gallery-item");
-    if (item) openLightbox(Number(item.dataset.index));
+    if (item) openLightbox(Number(item.dataset.index), item);
   });
 
   lightboxClose.addEventListener("click", closeLightbox);
@@ -153,11 +165,26 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
     if (e.target === lightbox) closeLightbox();
   });
 
+  // Focus trap: while the lightbox is open, Tab/Shift+Tab cycle only
+  // through its own controls instead of escaping into the page behind it.
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("active")) return;
-    if (e.key === "Escape") closeLightbox();
+
+    if (e.key === "Escape") {
+      closeLightbox();
+      return;
+    }
     if (e.key === "ArrowLeft") showPrev();
     if (e.key === "ArrowRight") showNext();
+
+    if (e.key === "Tab") {
+      const currentPos = focusableInLightbox.indexOf(document.activeElement);
+      const nextPos = e.shiftKey
+        ? (currentPos <= 0 ? focusableInLightbox.length - 1 : currentPos - 1)
+        : (currentPos === -1 || currentPos === focusableInLightbox.length - 1 ? 0 : currentPos + 1);
+      e.preventDefault();
+      focusableInLightbox[nextPos].focus();
+    }
   });
 
   let lightboxTouchStartX = 0;
@@ -191,34 +218,32 @@ if (galleryEl && typeof GALLERY_PHOTOS !== "undefined") {
 }
 
 // ---------- Homepage hero slider ----------
+// The slides themselves (real <img> tags, with alt text, one per photo)
+// are already in the page HTML — written by tools/generate-static.js so
+// that the photos and their captions exist in the DOM before any JS runs.
+// This block only wires up the interactive parts: dots, autoplay, a
+// pause control, and swipe/keyboard navigation.
 const sliderEl = document.getElementById("heroSlider");
 
-if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
-  SLIDER_PHOTOS.forEach((photo, index) => {
-    const slide = document.createElement("div");
-    slide.className = "slide" + (index === 0 ? " active" : "");
-    slide.style.backgroundImage = `url('${photo.src}')`;
-
-    const img = new Image();
-    img.onload = () => {
-      if (img.naturalWidth > img.naturalHeight) {
-        slide.classList.add("landscape-photo");
-      } else if (img.naturalHeight > img.naturalWidth) {
-        slide.classList.add("portrait-photo");
-      }
-    };
-    img.src = photo.src;
-
-    sliderEl.appendChild(slide);
-  });
-
+if (sliderEl) {
   const slides = sliderEl.querySelectorAll(".slide");
 
   if (slides.length > 1) {
+    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const controls = document.createElement("div");
+    controls.className = "slider-controls";
+
+    const pauseBtn = document.createElement("button");
+    pauseBtn.type = "button";
+    pauseBtn.className = "slide-pause";
+    controls.appendChild(pauseBtn);
+
     const dots = document.createElement("div");
     dots.className = "slide-dots";
     slides.forEach((_, index) => {
       const dot = document.createElement("button");
+      dot.type = "button";
       dot.className = "slide-dot" + (index === 0 ? " active" : "");
       dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
       dot.addEventListener("click", (e) => {
@@ -228,11 +253,21 @@ if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
       });
       dots.appendChild(dot);
     });
-    sliderEl.appendChild(dots);
+    controls.appendChild(dots);
+    sliderEl.appendChild(controls);
 
     const dotEls = dots.querySelectorAll(".slide-dot");
     let current = 0;
     let timer;
+    // Homepage autoplay honors prefers-reduced-motion the same way the
+    // logo intro animation already does: motion-sensitive visitors get
+    // a static first slide plus full manual control (dots/arrows/swipe).
+    let isPlaying = !reduceMotionQuery.matches;
+
+    function updatePauseButton() {
+      pauseBtn.textContent = isPlaying ? "❚❚" : "▶";
+      pauseBtn.setAttribute("aria-label", isPlaying ? "Pause slideshow" : "Play slideshow");
+    }
 
     function goToSlide(index) {
       slides[current].classList.remove("active");
@@ -251,6 +286,7 @@ if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
     }
 
     function startAutoplay() {
+      clearInterval(timer);
       timer = setInterval(nextSlide, 5000);
     }
 
@@ -259,13 +295,33 @@ if (sliderEl && typeof SLIDER_PHOTOS !== "undefined" && SLIDER_PHOTOS.length) {
     }
 
     function resetAutoplay() {
-      stopAutoplay();
-      startAutoplay();
+      if (isPlaying) startAutoplay();
     }
 
-    startAutoplay();
+    pauseBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isPlaying = !isPlaying;
+      updatePauseButton();
+      if (isPlaying) {
+        startAutoplay();
+      } else {
+        stopAutoplay();
+      }
+    });
+
+    updatePauseButton();
+    if (isPlaying) startAutoplay();
+
+    reduceMotionQuery.addEventListener("change", (e) => {
+      if (e.matches && isPlaying) {
+        isPlaying = false;
+        stopAutoplay();
+        updatePauseButton();
+      }
+    });
+
     sliderEl.addEventListener("mouseenter", stopAutoplay);
-    sliderEl.addEventListener("mouseleave", startAutoplay);
+    sliderEl.addEventListener("mouseleave", resetAutoplay);
 
     sliderEl.addEventListener("click", (e) => {
       const rect = sliderEl.getBoundingClientRect();

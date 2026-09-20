@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Will Cunningham — Photography</title>
 <meta name="description" content="I'm a photographer and teacher based in Washington, D.C. I started making photos in 2020 and haven't looked back. Come take a look!">
+<link rel="canonical" href="https://willcunninghamphoto.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Will Cunningham Photography">
+<meta property="og:url" content="https://willcunninghamphoto.com/">
+<meta property="og:title" content="Will Cunningham — Photography">
+<meta property="og:description" content="I'm a photographer and teacher based in Washington, D.C. I started making photos in 2020 and haven't looked back. Come take a look!">
+<meta property="og:image" content="https://willcunninghamphoto.com/images/nature-and-light/LOTUS.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Will Cunningham — Photography">
+<meta name="twitter:description" content="I'm a photographer and teacher based in Washington, D.C. I started making photos in 2020 and haven't looked back. Come take a look!">
+<meta name="twitter:image" content="https://willcunninghamphoto.com/images/nature-and-light/LOTUS.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,7 +32,7 @@
   <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <a href="index.html" class="mobile-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="mobile-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -42,7 +53,7 @@
 </div>
 
 <aside class="sidebar" id="sidebar">
-  <a href="index.html" class="sidebar-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="sidebar-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -62,14 +73,14 @@
   </a>
   <nav class="sidebar-nav">
     <div class="nav-group-label">Portfolio</div>
-    <a href="wildlife.html" class="sub-link">Wildlife</a>
-    <a href="nature-and-light.html" class="sub-link">Nature &amp; Light</a>
-    <a href="portraits.html" class="sub-link">Portraits</a>
-    <a href="woodshop.html" class="sub-link">Woodshop</a>
-    <a href="mckinley-tech.html" class="sub-link">McKinley Tech</a>
-    <a href="sports.html" class="sub-link">Sports</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="/wildlife" class="sub-link">Wildlife</a>
+    <a href="/nature-and-light" class="sub-link">Nature &amp; Light</a>
+    <a href="/portraits" class="sub-link">Portraits</a>
+    <a href="/woodshop" class="sub-link">Woodshop</a>
+    <a href="/mckinley-tech" class="sub-link">McKinley Tech</a>
+    <a href="/sports" class="sub-link">Sports</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
   </nav>
   <div class="sidebar-footer">
     <div class="sidebar-social">
@@ -81,12 +92,43 @@
 </aside>
 
 <div class="page-content home-content">
-  <section class="hero-slider" id="heroSlider"></section>
+  <section class="home-intro">
+    <h1>Will Cunningham Photography</h1>
+    <p>Photographer based in Washington, D.C., shooting wildlife, portraits, and everyday moments since 2020.</p>
+    <div class="home-cta">
+      <a href="/wildlife" class="btn btn-primary">View my Portfolio</a>
+      <a href="/contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </section>
+  <section class="hero-slider" id="heroSlider">
+    <!-- SLIDER:START -->
+        <div class="slide active landscape-photo" data-index="0">
+      <img src="images/nature-and-light/LOTUS.jpg" alt="Lotus flower in a pond" loading="eager">
+    </div>
+    <div class="slide landscape-photo" data-index="1">
+      <img src="images/wildlife/MOLTING_CARDINAL.jpg" alt="Molting cardinal perched on a branch" loading="lazy">
+    </div>
+    <div class="slide landscape-photo" data-index="2">
+      <img src="images/woodshop/freedom boat.jpg" alt="Freedom boat" loading="lazy">
+    </div>
+    <div class="slide landscape-photo" data-index="3">
+      <img src="images/woodshop/hand plane.jpg" alt="Hand plane" loading="lazy">
+    </div>
+    <div class="slide landscape-photo" data-index="4">
+      <img src="images/nature-and-light/tree hero photo.jpg" alt="Trees" loading="lazy">
+    </div>
+    <div class="slide landscape-photo" data-index="5">
+      <img src="images/nature-and-light/eclipse.jpg" alt="Solar eclipse" loading="lazy">
+    </div>
+    <div class="slide portrait-photo" data-index="6">
+      <img src="images/nature-and-light/rocky shore hero.jpg" alt="Rocky shore" loading="lazy">
+    </div>
+    <!-- SLIDER:END -->
+  </section>
 </div>
 
 <footer class="page-footer">Will Cunningham Photography</footer>
 
-<script src="js/photos.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,9 +4,9 @@
 
 const WILDLIFE_PHOTOS = [
   { src: "images/wildlife/MOLTING_CARDINAL.jpg", alt: "Molting cardinal perched on a branch" },
-  { src: "images/wildlife/osprey.jpg", alt: "Osprey" },
+  { src: "images/wildlife/osprey.jpg", alt: "Osprey flying with a freshly caught fish in its talons" },
   { src: "images/wildlife/black capped chicadee.jpg", alt: "Black-capped chickadee" },
-  { src: "images/wildlife/yellow bird.jpg", alt: "Yellow bird" },
+  { src: "images/wildlife/yellow bird.jpg", alt: "Yellow-rumped warbler in flight over yellow wildflowers" },
   { src: "images/wildlife/colorful background bird.jpg", alt: "Bird against a colorful background" },
   { src: "images/wildlife/baby ducks.jpg", alt: "Baby ducks" },
   { src: "images/wildlife/small bird on branch.jpg", alt: "Small bird perched on a branch" },
@@ -139,7 +139,7 @@ const MCKINLEY_TECH_PHOTOS = [
   { src: "images/mckinley-tech/prom portrait 2.jpg", alt: "Prom portrait of two students" },
   { src: "images/mckinley-tech/chess club.jpg", alt: "Students playing chess" },
   { src: "images/mckinley-tech/trainers club.jpg", alt: "Group photo of students and a teacher in the library" },
-  { src: "images/mckinley-tech/mths db girl1.jpg", alt: "McKinley Tech — girl" },
+  { src: "images/mckinley-tech/mths db girl1.jpg", alt: "Students laughing together while playing an arcade game" },
   { src: "images/mckinley-tech/building a robot.jpg", alt: "Student building a robot in class" },
   { src: "images/mckinley-tech/black and white candid.jpg", alt: "Black-and-white candid portrait of a student" },
   { src: "images/mckinley-tech/prom dance floor.jpg", alt: "Students dancing at prom" },

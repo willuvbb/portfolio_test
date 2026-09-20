@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Woodshop — Will Cunningham Photography</title>
-<meta name="description" content="Woodshop photography by Will Cunningham.">
+<meta name="description" content="Woodshop photography by Will Cunningham — handmade projects and craftsmanship captured in the shop.">
+<link rel="canonical" href="https://willcunninghamphoto.com/woodshop">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Will Cunningham Photography">
+<meta property="og:url" content="https://willcunninghamphoto.com/woodshop">
+<meta property="og:title" content="Woodshop — Will Cunningham Photography">
+<meta property="og:description" content="Woodshop photography by Will Cunningham — handmade projects and craftsmanship captured in the shop.">
+<meta property="og:image" content="https://willcunninghamphoto.com/images/woodshop/hand%20plane.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Woodshop — Will Cunningham Photography">
+<meta name="twitter:description" content="Woodshop photography by Will Cunningham — handmade projects and craftsmanship captured in the shop.">
+<meta name="twitter:image" content="https://willcunninghamphoto.com/images/woodshop/hand%20plane.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,7 +30,7 @@
   <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <a href="index.html" class="mobile-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="mobile-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -40,7 +51,7 @@
 </div>
 
 <aside class="sidebar" id="sidebar">
-  <a href="index.html" class="sidebar-logo" aria-label="Will Cunningham — Home">
+  <a href="/" class="sidebar-logo" aria-label="Will Cunningham — Home">
     <svg class="logo-mark" viewBox="0 0 264.41 105.77" xmlns="http://www.w3.org/2000/svg">
     <circle cx="26.44" cy="26.44" r="26.44"/>
     <circle cx="79.32" cy="79.32" r="26.44"/>
@@ -60,14 +71,14 @@
   </a>
   <nav class="sidebar-nav">
     <div class="nav-group-label">Portfolio</div>
-    <a href="wildlife.html" class="sub-link">Wildlife</a>
-    <a href="nature-and-light.html" class="sub-link">Nature &amp; Light</a>
-    <a href="portraits.html" class="sub-link">Portraits</a>
-    <a href="woodshop.html" class="sub-link current">Woodshop</a>
-    <a href="mckinley-tech.html" class="sub-link">McKinley Tech</a>
-    <a href="sports.html" class="sub-link">Sports</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="/wildlife" class="sub-link">Wildlife</a>
+    <a href="/nature-and-light" class="sub-link">Nature &amp; Light</a>
+    <a href="/portraits" class="sub-link">Portraits</a>
+    <a href="/woodshop" class="sub-link current">Woodshop</a>
+    <a href="/mckinley-tech" class="sub-link">McKinley Tech</a>
+    <a href="/sports" class="sub-link">Sports</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
   </nav>
   <div class="sidebar-footer">
     <div class="sidebar-social">
@@ -83,11 +94,32 @@
     <h1 class="section-title">Woodshop</h1>
   </div>
   <section class="gallery-section">
-    <div class="gallery" id="gallery"></div>
+    <!-- GALLERY:START -->
+    <div class="gallery" id="gallery">
+    <div class="gallery-column">
+      <button class="gallery-item" type="button" data-index="0" aria-label="View larger photo: Hand plane">
+        <img src="images/woodshop/hand plane.jpg" alt="Hand plane" loading="lazy" width="1024" height="683">
+      </button>
+      <button class="gallery-item" type="button" data-index="3" aria-label="View larger photo: Rory in the woodshop">
+        <img src="images/woodshop/rory woodshop.jpg" alt="Rory in the woodshop" loading="lazy" width="683" height="1024">
+      </button>
+    </div>
+    <div class="gallery-column">
+      <button class="gallery-item" type="button" data-index="1" aria-label="View larger photo: Portrait of Sammy in the shop">
+        <img src="images/woodshop/sammy shop portrait.jpg" alt="Portrait of Sammy in the shop" loading="lazy" width="683" height="1024">
+      </button>
+    </div>
+    <div class="gallery-column">
+      <button class="gallery-item" type="button" data-index="2" aria-label="View larger photo: Freedom boat">
+        <img src="images/woodshop/freedom boat.jpg" alt="Freedom boat" loading="lazy" width="1024" height="683">
+      </button>
+    </div>
+  </div>
+    <!-- GALLERY:END -->
   </section>
 </div>
 
-<div class="lightbox" id="lightbox">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
   <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
   <img class="lightbox-img" id="lightboxImg" src="" alt="">
