@@ -44,6 +44,14 @@ if (homeTitle) {
 
   fitHomeTitle();
 
+  // Re-fit once the Fraunces webfont finishes loading. The initial fit
+  // above runs before the font-display:swap webfont is ready, so it
+  // measures the fallback font (Georgia); Fraunces renders wider, so
+  // text that fit pre-swap can overflow post-swap if we never recheck.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitHomeTitle);
+  }
+
   let titleResizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(titleResizeTimer);
