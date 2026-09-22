@@ -21,6 +21,36 @@ sidebar.querySelectorAll("a").forEach((link) => {
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ---------- Homepage title: shrink-to-fit on one line ----------
+// CSS alone can't reliably predict how wide rendered text will be (it
+// depends on the actual font metrics), so this measures the real
+// rendered width and steps the font size down until it fits — rather
+// than wrapping to a second line or overflowing the viewport.
+const homeTitle = document.querySelector(".home-intro h1");
+
+if (homeTitle) {
+  const maxFontSize = 32; // px, matches the 2rem CSS default
+  const minFontSize = 14; // px floor so it never becomes illegible
+
+  function fitHomeTitle() {
+    homeTitle.style.whiteSpace = "nowrap";
+    let fontSize = maxFontSize;
+    homeTitle.style.fontSize = fontSize + "px";
+    while (homeTitle.scrollWidth > homeTitle.clientWidth && fontSize > minFontSize) {
+      fontSize -= 1;
+      homeTitle.style.fontSize = fontSize + "px";
+    }
+  }
+
+  fitHomeTitle();
+
+  let titleResizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(titleResizeTimer);
+    titleResizeTimer = setTimeout(fitHomeTitle, 150);
+  });
+}
+
 // ---------- Discourage right-click / drag-saving photos ----------
 // Deters casual saving only — view-source, devtools, and screenshots
 // still work, but this stops the common right-click / drag-to-desktop case.
